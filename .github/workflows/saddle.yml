@@ -1,0 +1,19 @@
+name: worker
+
+on:
+  push:
+
+jobs:
+  capacity:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        moisture: ["rainy", "comprise", "adapt", "evident", "layer"]
+        obtain: ["cucumber", "astonish", "oblige", "persist"]
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'zulu'
+        java-version: '25'
+    - run: java -jar fy
